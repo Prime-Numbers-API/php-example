@@ -1,21 +1,34 @@
 <?php
 
-$url = "http://api.prime-numbers.io/get-random-prime.php?key=123&language=english";
+$getRandomUrl = "http://api.prime-numbers.io/get-random-prime.php?key=123&language=english";
+Class A{
+   private $response;
+    
 
-$curl = curl_init($url);
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+   public function getRandomPrime($url) {
+      
 
-$headers = array(
-   "Accept: application/json",
-);
-curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-//for debug only!
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+      $curl = curl_init($url);
+      curl_setopt($curl, CURLOPT_URL, $url);
+      curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-$resp = curl_exec($curl);
-curl_close($curl);
-var_dump($resp);
+      $headers = array(
+         "Accept: application/json",
+      );
+      curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+      //for debug only!
+      curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+      curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+      $resp = curl_exec($curl);
+      curl_close($curl);
+      var_dump($resp);
+
+      return $this;
+   }
+}
+
+   $response = new A();
+   $response->getRandomPrime($getRandomUrl);
 
 ?>
