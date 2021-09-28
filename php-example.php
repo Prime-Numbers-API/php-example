@@ -1,5 +1,10 @@
 <?php
 
+$getRandomPrimeUrl = "http://api.prime-numbers.io/get-random-prime.php?key=123&language=english";
+$isThisNumberPrimeUrl = "http://api.prime-numbers.io/is-this-number-prime.php?key=123&number=41";
+$getAllPrimesBetweenTwoNumbersUrl = "http://api.prime-numbers.io/get-all-primes-between-two-numbers.php?key=123&start=350&end=500";
+$propsectPrimesBetweenTwoNumbersUrl = "http://api.prime-numbers.io/prospect-primes-between-two-numbers.php?key=123&start=350&end=500";
+$getIsolatedRandomPrimeUrl = "http://api.prime-numbers.io/get-isolated-random-prime.php?key=123&include_explanations=true&include_prime_types_list=true&minimum_combined_prime_gap=500";
 $getRandomUrl = "http://api.prime-numbers.io/get-random-prime.php?key=123&language=english";
 Class A{
    private $response;
@@ -29,6 +34,6 @@ Class A{
 }
 
    $response = new A();
-   $response->getRandomPrime($getRandomUrl);
+   $response->getRandomPrime($getIsolatedRandomPrimeUrl);
 
 ?>
