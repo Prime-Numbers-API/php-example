@@ -1,8 +1,8 @@
 <?php
 class parentClass {
+    public $base_url = 'http://api.prime-numbers.io/get-random-prime.php?';
     public    $key      = '123';
     public $language     = 'english';
-    private   $priv     = 'privateParent';
 }
     // public    $pub_bar  = Null;
     // protected $prot_bar = Null;
@@ -22,6 +22,6 @@ class parentClass {
 // }
 
 $parent = new parentClass();
-
-echo http_build_query($parent, '&');
+echo $url = http_build_query($parent, '&');
+echo $decoded_url = urldecode($url);
 ?>
