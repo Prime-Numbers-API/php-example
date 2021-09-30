@@ -1,10 +1,10 @@
 <?php
 class isThisNumberPrimeQueryBuilder {
-    public    $key      = '123';
-    public $number     = '41';
+    public  $key    =   '123';
+    public  $number =   '41';
 }
 
-$parent = new isThisNumberPrimeQueryBuilder();
-echo $isThisNumberPrimeQuery = http_build_query($parent, '&');
+$query = new isThisNumberPrimeQueryBuilder();
+echo $isThisNumberPrimeQuery = http_build_query($query, '&');
 
 ?>
