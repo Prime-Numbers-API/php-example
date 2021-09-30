@@ -23,10 +23,15 @@ class parentClass {
 
 $parent = new parentClass();
 $url = http_build_query($parent, '&');
+ob_start();
 echo $decoded_url = urldecode($url);
-return $decoded_url[0] > 0;
+$output = ob_get_contents();
+ob_end_clean();
+echo "$output hello";
+return $output[0] > 0;
 
-Class A{
+
+class A{
     private $response;
      
  
@@ -54,7 +59,7 @@ Class A{
  }
  
     $response = new A();
-    $response->runPrimeURL($decoded_url);
+    $response->runPrimeURL($output);
 
 
 
