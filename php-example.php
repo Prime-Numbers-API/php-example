@@ -2,12 +2,12 @@
 
 
 $getRandomPrimeUrl = "http://api.prime-numbers.io/get-random-prime.php?";
-$isThisNumberPrimeUrl = "http://api.prime-numbers.io/is-this-number-prime.php?key=123&number=41";
+$isThisNumberPrimeUrl = "http://api.prime-numbers.io/is-this-number-prime.php?";
 $getAllPrimesBetweenTwoNumbersUrl = "http://api.prime-numbers.io/get-all-primes-between-two-numbers.php?key=123&start=350&end=500";
 $propsectPrimesBetweenTwoNumbersUrl = "http://api.prime-numbers.io/prospect-primes-between-two-numbers.php?key=123&start=350&end=500";
 $getIsolatedRandomPrimeUrl = "http://api.prime-numbers.io/get-isolated-random-prime.php?key=123&include_explanations=true&include_prime_types_list=true&minimum_combined_prime_gap=500";
 
-Class A{
+Class Main{
    private $response;
     
 
@@ -35,10 +35,15 @@ Class A{
 }
 
    include 'get-random-prime.php';
-   $result = $getRandomPrimeUrl . $query; 
+   include 'is-this-number-prime.php';
+   $getRandomResult = $getRandomPrimeUrl . $getRandomPrimeQuery; 
+   $isThisNumberResult = $isThisNumberPrimeUrl . $isThisNumberPrimeQuery; 
    
-   echo " result --> $result <---";
-   $response = new A();
-   $response->runPrimeURL($result);
+   //view result URL in terminal
+   echo " result --> $getRandomResult <---";
+
+   //create class instance and pass result
+   $response = new Main();
+   $response->runPrimeURL($getRandomResult);
 
 ?>

@@ -1,10 +1,10 @@
 <?php
-class getRandomPrime {
+class isThisNumberPrimeQueryBuilder {
     public    $key      = '123';
-    public $language     = 'english';
+    public $number     = '41';
 }
 
-$parent = new getRandomPrime();
-echo $query = http_build_query($parent, '&');
+$parent = new isThisNumberPrimeQueryBuilder();
+echo $isThisNumberPrimeQuery = http_build_query($parent, '&');
 
 ?>
