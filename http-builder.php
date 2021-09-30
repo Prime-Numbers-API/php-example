@@ -22,9 +22,9 @@ class parentClass {
 
 $parent = new parentClass();
 
-ob_start();
+// ob_start();
 echo $url = http_build_query($parent, '&');
-$output = ob_get_clean();
-echo $output;
-return $output[0] > 0;
+// $output = ob_get_clean();
+// echo $output;
+// return $output[0] > 0;
 ?>
