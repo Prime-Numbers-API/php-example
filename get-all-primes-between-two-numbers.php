@@ -1,11 +1,12 @@
 <?php
-class getRandomPrime {
+class getAllPrimesBetweenTwoNumbersQueryBuilder {
     public    $key      = '123';
-    public $language     = 'english';
+    public $start     = '350';
+    public $end     = '500';
 }
 
 
-$parent = new getRandomPrime();
-echo $query = http_build_query($parent, '&');
+$parent = new getAllPrimesBetweenTwoNumbersQueryBuilder();
+echo $getAllPrimesBetweenTwoNumbersQuery = http_build_query($parent, '&');
 
 ?>
