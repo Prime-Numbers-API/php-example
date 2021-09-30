@@ -1,5 +1,5 @@
 <?php
-class parentClass {
+class getRandomPrime {
     public    $key      = '123';
     public $language     = 'english';
 }
@@ -20,10 +20,10 @@ class parentClass {
 //     private   $priv = 'privateChild';
 // }
 
-$parent = new parentClass();
+$parent = new getRandomPrime();
 
 // ob_start();
-echo $url = http_build_query($parent, '&');
+echo $query = http_build_query($parent, '&');
 // $output = ob_get_clean();
 // echo $output;
 // return $output[0] > 0;
