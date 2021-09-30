@@ -4,6 +4,7 @@ class getRandomPrime {
     public $language     = 'english';
 }
 
+
 $parent = new getRandomPrime();
 echo $query = http_build_query($parent, '&');
 
