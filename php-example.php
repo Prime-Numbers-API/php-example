@@ -5,7 +5,7 @@ $getRandomPrimeUrl = "http://api.prime-numbers.io/get-random-prime.php?";
 $isThisNumberPrimeUrl = "http://api.prime-numbers.io/is-this-number-prime.php?";
 $getAllPrimesBetweenTwoNumbersUrl = "http://api.prime-numbers.io/get-all-primes-between-two-numbers.php?";
 $propsectPrimesBetweenTwoNumbersUrl = "http://api.prime-numbers.io/prospect-primes-between-two-numbers.php?";
-$getIsolatedRandomPrimeUrl = "http://api.prime-numbers.io/get-isolated-random-prime.php?key=123&include_explanations=true&include_prime_types_list=true&minimum_combined_prime_gap=500";
+$getIsolatedRandomPrimeUrl = "http://api.prime-numbers.io/get-isolated-random-prime.php?";
 
 Class Main{
    private $response;
@@ -38,17 +38,20 @@ Class Main{
    include 'is-this-number-prime.php';
    include 'get-all-primes-between-two-numbers.php';
    include 'prospect-primes-between-two-numbers.php';
+   include 'get-isolated-random-prime.php';
 
+   //create result for call you want
    $getRandomResult = $getRandomPrimeUrl . $getRandomPrimeQuery; 
    $isThisNumberResult = $isThisNumberPrimeUrl . $isThisNumberPrimeQuery; 
    $getAllPrimesBetweenTwoNumbersResult = $getAllPrimesBetweenTwoNumbersUrl . $getAllPrimesBetweenTwoNumbersQuery; 
    $propsectPrimesBetweenTwoNumbersResult = $propsectPrimesBetweenTwoNumbersUrl . $propsectPrimesBetweenTwoNumbersQuery; 
+   $getIsolatedRandomPrimeResult = $getIsolatedRandomPrimeUrl . $getIsolatedRandomPrimeQuery; 
    
    //view result URL in terminal
-   echo " result --> $propsectPrimesBetweenTwoNumbersResult <---";
+   echo " result --> $getIsolatedRandomPrimeResult <---";
 
    //create class instance and pass result
    $response = new Main();
-   $response->runPrimeURL($propsectPrimesBetweenTwoNumbersResult);
+   $response->runPrimeURL($getIsolatedRandomPrimeResult);
 
 ?>
