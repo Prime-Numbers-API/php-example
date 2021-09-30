@@ -1,6 +1,5 @@
 <?php
 class parentClass {
-    public $base_url = 'http://api.prime-numbers.io/get-random-prime.php?';
     public    $key      = '123';
     public $language     = 'english';
 }
@@ -22,45 +21,10 @@ class parentClass {
 // }
 
 $parent = new parentClass();
-$url = http_build_query($parent, '&');
+
 ob_start();
-echo $decoded_url = urldecode($url);
-$output = ob_get_contents();
-ob_end_clean();
-echo "$output hello";
+echo $url = http_build_query($parent, '&');
+$output = ob_get_clean();
+echo $output;
 return $output[0] > 0;
-
-
-class A{
-    private $response;
-     
- 
-    public function runPrimeURL($url) {
-       
- 
-       $curl = curl_init($url);
-       curl_setopt($curl, CURLOPT_URL, $url);
-       curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
- 
-       $headers = array(
-          "Accept: application/json",
-       );
-       curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-       //for debug only!
-       curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-       curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
- 
-       $resp = curl_exec($curl);
-       curl_close($curl);
-       var_dump($resp);
- 
-       return $this;
-    }
- }
- 
-    $response = new A();
-    $response->runPrimeURL($output);
-
-
-
 ?>

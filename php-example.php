@@ -1,6 +1,7 @@
 <?php
 
-$getRandomPrimeUrl = "http://api.prime-numbers.io/get-random-prime.php?key=123&language=english";
+// $getRandomPrimeUrl = "http://api.prime-numbers.io/get-random-prime.php?key=123&language=english";
+$getRandomPrimeUrl = "http://api.prime-numbers.io/get-random-prime.php?";
 $isThisNumberPrimeUrl = "http://api.prime-numbers.io/is-this-number-prime.php?key=123&number=41";
 $getAllPrimesBetweenTwoNumbersUrl = "http://api.prime-numbers.io/get-all-primes-between-two-numbers.php?key=123&start=350&end=500";
 $propsectPrimesBetweenTwoNumbersUrl = "http://api.prime-numbers.io/prospect-primes-between-two-numbers.php?key=123&start=350&end=500";
@@ -33,11 +34,14 @@ Class A{
    }
 }
 
+   include 'http-builder.php';
+
    $response = new A();
-   $response->runPrimeURL($getRandomPrimeUrl);
-   $response->runPrimeURL($isThisNumberPrimeUrl);
-   $response->runPrimeURL($getAllPrimesBetweenTwoNumbersUrl);
-   $response->runPrimeURL($propsectPrimesBetweenTwoNumbersUrl);
-   $response->runPrimeURL($getIsolatedRandomPrimeUrl);
+   $response->runPrimeURL($getRandomPrimeUrl + $output);
+   // $response->runPrimeURL($getRandomPrimeUrl);
+   // $response->runPrimeURL($isThisNumberPrimeUrl);
+   // $response->runPrimeURL($getAllPrimesBetweenTwoNumbersUrl);
+   // $response->runPrimeURL($propsectPrimesBetweenTwoNumbersUrl);
+   // $response->runPrimeURL($getIsolatedRandomPrimeUrl);
 
 ?>
