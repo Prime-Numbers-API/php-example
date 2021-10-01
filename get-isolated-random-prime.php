@@ -1,4 +1,7 @@
 <?php
+
+$getIsolatedRandomPrimeUrl = "http://api.prime-numbers.io/get-isolated-random-prime.php?";
+
 class getIsolatedRandomPrimeQueryBuilder {
     public  $key    =   '123';
     public  $include_explanations   =   'true';
@@ -9,5 +12,7 @@ class getIsolatedRandomPrimeQueryBuilder {
 
 $query = new getIsolatedRandomPrimeQueryBuilder();
 echo $getIsolatedRandomPrimeQuery = http_build_query($query, '&');
+
+$getIsolatedRandomPrimeResult = $getIsolatedRandomPrimeUrl . $getIsolatedRandomPrimeQuery; 
 
 ?>

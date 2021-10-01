@@ -1,4 +1,7 @@
 <?php
+
+$propsectPrimesBetweenTwoNumbersUrl = "http://api.prime-numbers.io/prospect-primes-between-two-numbers.php?";
+
 class propsectPrimesBetweenTwoNumbersQueryBuilder {
     public  $key    =   '123';
     public  $start  =   '350';
@@ -7,5 +10,7 @@ class propsectPrimesBetweenTwoNumbersQueryBuilder {
 
 $query = new propsectPrimesBetweenTwoNumbersQueryBuilder();
 echo $propsectPrimesBetweenTwoNumbersQuery = http_build_query($query, '&');
+
+$propsectPrimesBetweenTwoNumbersResult = $propsectPrimesBetweenTwoNumbersUrl . $propsectPrimesBetweenTwoNumbersQuery; 
 
 ?>
