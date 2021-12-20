@@ -3,7 +3,7 @@
 $getRandomPrimeUrl = "http://api.prime-numbers.io/get-random-prime.php?";
 
 class getRandomPrimeQueryBuilder {
-    public  $key    =   '123';
+    public  $key    =   'YOUR_API_KEY';
     public  $language   =   'english';
 }
 

@@ -3,7 +3,7 @@
 $isThisNumberPrimeUrl = "http://api.prime-numbers.io/is-this-number-prime.php?";
 
 class isThisNumberPrimeQueryBuilder {
-    public  $key    =   '123';
+    public  $key    =   'YOUR_API_KEY';
     public  $number =   '41';
 }
 
